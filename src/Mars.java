@@ -20,11 +20,12 @@ public class Mars {
         } else {
             System.out.println("ERROR!!! Flight plan already set. Landing on The Plain");
         }
-        landing = landingCheck(100);
+        landing = landingCheck();
     }
 
-    private static boolean landingCheck(int minutesLeft) throws InterruptedException {
-        for (int minute = 0; minute <= minutesLeft; i++) {
+    private static boolean landingCheck() throws InterruptedException {
+        int minute = 0;
+        for (int i = 0; minute <= 100; i++) {
             if (((minute % 3) == 0) && ((minute % 2) == 0)) {
                 System.out.println("Keep Center");
             } else if ((minute % 2) == 0) {
